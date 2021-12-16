@@ -1,0 +1,3 @@
+[submodule "AndroidOneSignal"]
+	path = AndroidOneSignal
+	url = https://github.com/MuhammedRefaat/Android-OneSignal-3.16.0.git

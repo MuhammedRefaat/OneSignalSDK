@@ -1,3 +1,4 @@
 rootProject.name = 'onesignal'
+//include ':onesignal', ':AndroidOneSignal'
 /*include ':libraries/OneSignal-Android-SDK-3.16.0'
 project(':libraries:OneSignal-Android-SDK-3.16.0').projectDir = new File('libraries.OneSignal-Android-SDK-3.16.0/OneSignalSDK/onesignal')*/

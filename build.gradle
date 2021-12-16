@@ -5,8 +5,6 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-
-        maven { url "https://jitpack.io" }
         // huawei maven
         maven { url 'https://developer.huawei.com/repo/' }
     }
@@ -23,10 +21,13 @@ rootProject.allprojects {
         mavenCentral()
         // huawei maven
         maven { url 'https://developer.huawei.com/repo/' }
+        // Jitpack maven
+        maven { url 'https://jitpack.io' }
     }
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 30
@@ -43,8 +44,10 @@ android {
 
 dependencies {
     // api project('https://github.com/MuhammedRefaat/Android-OneSignal-3.16.0.git')
+    //implementation 'com.github.jitpack:gradle-simple:master-SNAPSHOT'
     // My OneSignal library implementation
-    api 'com.github.jitpack:Android-OneSignal-3.16.0:master-SNAPSHOT'
+    api 'com.github.MuhammedRefaat:Android-OneSignal-3.16.0:2.0.0'
+    //api project(':AndroidOneSignal')
     // Huawei PushKit
     // KEEP as "compileOnly", so OneSignal isn't a direct dependency in the POM file.
     compileOnly 'com.huawei.hms:push:6.1.0.300'
